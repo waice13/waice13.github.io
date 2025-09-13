@@ -1,0 +1,2 @@
+- do not use emoji
+- do not co author when commit

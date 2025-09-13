@@ -1,0 +1,77 @@
+# Site settings
+title: Tech Box Box
+description: Your tech pit stop for Data Engineering, Rust, and F1 Data Analysis 🏎️
+author: Warut K
+email: warutk.dev@gmail.com
+url: "https://waice13.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Data Engineering
+    url: /categories/data-engineering/
+  - title: Rust
+    url: /categories/rust/
+  - title: F1 Analysis
+    url: /categories/f1-analysis/
+  - title: About
+    url: /about/
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Syntax highlighting
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - CLAUDE.md
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Warut K"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
