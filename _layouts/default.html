@@ -16,10 +16,10 @@
     {%- include footer.html -%}
 
     <!-- Copy code functionality -->
-    <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/copy-code.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 
     <!-- Image zoom functionality -->
-    <script src="{{ '/assets/js/image-zoom.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/image-zoom.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 
   </body>
 
