@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-# About Tech Box Box
+## About Tech Box Box
 
 "Box Box" คือคำสั่งที่นักขับ F1 ใช้เวลาต้องเข้า pit stop เพื่อเปลี่ยนยางหรืออัพเกรด เลยเอามาใช้ให้เหมือนกับเราที่หยุดมาเรียนรู้ tech ใหม่ ๆ เพื่ออัพเกรดตัวเอง
 
