@@ -1,0 +1,310 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Standard Bootstrap-like container widths */
+.wrapper {
+  width: 100% !important;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Bootstrap container breakpoints */
+@media (min-width: 576px) {
+  .wrapper {
+    max-width: 540px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 720px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1140px !important;
+  }
+}
+
+/* Fix code block styling */
+.highlight {
+  border-radius: 4px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+.highlight table {
+  margin-bottom: 0;
+  border: none;
+}
+
+.highlight table td {
+  padding: 0;
+  border: none;
+}
+
+.highlight table .gutter {
+  border-right: 1px solid #ccc;
+  text-align: right;
+  padding-right: 1em;
+  margin-right: 1em;
+  color: #666;
+}
+
+.highlight table .code {
+  padding-left: 1em;
+}
+
+/* Remove line numbers if they're causing issues */
+.highlight .lineno {
+  color: #666;
+  border-right: 1px solid #ddd;
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* GitHub-style code blocks */
+pre, code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+}
+
+/* Inline code */
+code {
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  border: none;
+  color: #24292f;
+}
+
+/* Code blocks */
+pre {
+  background-color: #EBEBEB;
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #24292f;
+  font-size: inherit;
+}
+
+/* Remove any inner borders or styling */
+.highlight {
+  background: #EBEBEB;
+  border: none;
+  border-radius: 6px;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.highlight pre {
+  margin: 0;
+  background: transparent;
+  padding: 16px;
+}
+
+/* Override minima theme's highlight background */
+.highlighter-rouge .highlight {
+  background: #EBEBEB !important;
+}
+
+/* GitHub-style syntax highlighting - minimal colors */
+.highlight .k,   /* Keywords */
+.highlight .kd,  /* Keyword declarations */
+.highlight .kn,  /* Keyword namespace */
+.highlight .kp,  /* Keyword pseudo */
+.highlight .kr,  /* Keyword reserved */
+.highlight .kt   /* Keyword type */ {
+  color: #d73a49;
+  font-weight: 600;
+}
+
+.highlight .s,   /* Strings */
+.highlight .s1,  /* String single */
+.highlight .s2,  /* String double */
+.highlight .se,  /* String escape */
+.highlight .si   /* String interpolation */ {
+  color: #032f62;
+}
+
+.highlight .c,   /* Comments */
+.highlight .c1,  /* Comment single line */
+.highlight .cm   /* Comment multiline */ {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.highlight .m,   /* Numbers */
+.highlight .mi,  /* Number integer */
+.highlight .mf,  /* Number float */
+.highlight .mh,  /* Number hex */
+.highlight .mo   /* Number octal */ {
+  color: #005cc5;
+}
+
+/* Reset other elements to default text color for simplicity */
+.highlight .n,
+.highlight .na,
+.highlight .nb,
+.highlight .nc,
+.highlight .nd,
+.highlight .nf,
+.highlight .nl,
+.highlight .nn,
+.highlight .nt,
+.highlight .nv {
+  color: #24292f;
+}
+
+/* Copy code button styles */
+.code-block-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #2d3748;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.copy-code-btn:hover {
+  background: #4a5568;
+}
+
+.copy-code-btn.copied {
+  background: #38a169;
+}
+
+.copy-code-btn:active {
+  transform: scale(0.95);
+}
+
+/* Make sure pre blocks have relative positioning for button placement */
+.highlight, pre {
+  position: relative;
+}
+
+/* Image zoom modal styles */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: fadeIn 0.3s ease;
+}
+
+.image-modal-content {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.image-modal-img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.image-modal-close:hover,
+.image-modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.image-modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Make post images responsive - no hover effects */
+.post-content img,
+article img,
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 700px) {
+  .image-modal-img {
+    width: 100%;
+    max-height: 70%;
+  }
+
+  .image-modal-close {
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+  }
+
+  .image-modal-caption {
+    font-size: 14px;
+  }
+}
