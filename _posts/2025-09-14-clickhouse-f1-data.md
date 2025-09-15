@@ -6,7 +6,7 @@ categories: [data-engineering]
 tags: [clickhouse, f1, olap, python]
 ---
 
-ผมจะการเขียน Blog ครั้งแรกด้วยการทดลองใช้ ClickHouse Version OpenSource ซึ่งเป็น Data Warehouse ที่มาแรงมาก ๆ ในตอนนี้ครับ โดยจะทดลองเอา Data จาก F1 บาง Race ของปี 2024 มาเล่นกัน
+ผมจะเขียน Blog ครั้งแรกด้วยการทดลองใช้ ClickHouse Version OpenSource ซึ่งเป็น Data Warehouse ที่มาแรงมาก ๆ ในตอนนี้ครับ โดยจะทดลองเอา Data จาก F1 บาง Race ของปี 2024 มาเล่นกัน
 
 ## เตรียม Environment
 
